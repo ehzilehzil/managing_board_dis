@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+import Login from "../layouts/Login.astro";
+import ChangePW from "../layouts/ChangePW.astro";
+import Main from "../layouts/Main.astro";
+---
+
+<Base>
+	<div class="fixed top-0 right-0 bottom-0 left-0 z-999">
+		<div class="h-full w-full flex flex-col">
+			<div class="flex-[0_0_0] m-[4px]">
+				<Login />
+			</div>
+			<hr />
+			<div class="flex-[0_0_0] m-[4px]">
+				<ChangePW />
+			</div>
+			<hr />
+			<div class="flex-[1_0_0] m-[4px]">
+				<Main />
+			</div>
+		</div>
+	</div>
+	<div id="loading" style="display:none;" class="fixed top-0 right-0 bottom-0 left-0 z-9999 bg-gray-300 opacity-80 items-center justify-center">
+		<div class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+	</div>
+</Base>
+
+<script>
+
+	document.addEventListener("alpine:init", () => {
+		Alpine.store("tags", {
+			loading: document.querySelector("#loading"),
+			jspreadsheet: document.querySelector("#jspreadsheet"),
+		});
+		Alpine.store("global", {
+			no: "",
+			name: "",
+			pw: "",
+			tobepw: "",
+			data: [],
+			url: "https://script.google.com/macros/s/AKfycby4AxPFY6eMcFz48jV-PJ8I5wAYI-9zv1Ueth36DKHvZLY_PnsThzPEG8LGXZYALh3jOw/exec",
+		});
+		Alpine.store("functions", {
+			changePW: () => {},
+			getStatus: () => {},
+			updateStatus: () => {},
+		});
+	});
+</script>
