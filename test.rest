@@ -1,0 +1,31 @@
+# POST https://script.google.com/macros/s/AKfycbxQQ2l1Gef7r24C-WOeU3UKl_7U8FXtKI0mNBSveiTj50gIBpQFoeXvKF5UMJe3eVNz/exec
+POST https://script.google.com/macros/s/AKfycbzCeqc79h5axWuf6x46ZHNjXtor7bRPSAd6U-sTEmxHJNRvd2SWvSFI1EKD08FziSt0/exec
+
+{
+    "action": "updateStatus",
+    "no": "257319",
+    "name": "주우찬",
+    "pw": "257319",
+    "data": [
+        [
+  "257319",
+  "주우찬",
+  "70202526",
+  "대아유통",
+  "유통경북팀",
+  "FO 대구경북",
+  "유통점",
+  "O",
+  "X",
+  "O",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "X",
+  "아아아",
+  ""
+]
+    ]
+}
